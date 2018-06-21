@@ -1,0 +1,100 @@
+import { Component, AfterViewInit, ViewChild } from '@angular/core';
+
+import 'd3';
+import 'nvd3'
+import {NvD3Module} from 'ng2-nvd3';
+
+import * as $ from 'jquery';
+import * as shape from 'd3-shape';
+import { colorSets  } from '@swimlane/ngx-charts/release/utils/color-sets';
+import { SharedModule } from '../shared/shared.module';
+
+@Component({
+  selector: 'app-bargraph',
+  templateUrl: './bargraph.component.html',
+  styleUrls: ['./bargraph.component.scss']
+})
+export class BargraphComponent {
+
+  graphData: any;
+
+  options: any;
+  data: any;
+  @ViewChild('nvd3') nvd3;
+
+  constructor(public sharedModule: SharedModule) {
+    this.graphData = {
+        nodes: [
+            {data: {id: 'j', name: 'Jerry', faveColor: '#6FB1FC', faveShape: 'triangle'}},
+            {data: {id: 'e', name: 'Elaine', faveColor: '#EDA1ED', faveShape: 'ellipse'}},
+            {data: {id: 'k', name: 'Kramer', faveColor: '#86B342', faveShape: 'octagon'}},
+            {data: {id: 'g', name: 'George', faveColor: '#F5A45D', faveShape: 'rectangle'}}
+        ],
+        edges: [
+            {data: {source: 'j', target: 'e', faveColor: '#6FB1FC'}},
+            {data: {source: 'j', target: 'k', faveColor: '#6FB1FC'}},
+            {data: {source: 'j', target: 'g', faveColor: '#6FB1FC'}},
+
+            {data: {source: 'e', target: 'j', faveColor: '#EDA1ED'}},
+            {data: {source: 'e', target: 'k', faveColor: '#EDA1ED'}},
+
+            {data: {source: 'k', target: 'j', faveColor: '#86B342'}},
+            {data: {source: 'k', target: 'e', faveColor: '#86B342'}},
+            {data: {source: 'k', target: 'g', faveColor: '#86B342'}},
+
+            {data: {source: 'g', target: 'j', faveColor: '#F5A45D'}}
+        ]
+    };
+    this.options = {
+      chart: {
+        type: 'discreteBarChart',
+        height: 450,
+        margin : {
+          top: 80,
+          right: 50,
+          bottom: 180,
+          left: 55
+        },
+        x: function(d){return d.label;},
+        y: function(d){return d.value;},
+        showValues: true,
+        valueFormat: function(d){
+          return d3.format(',.0f')(d);
+        },
+        duration: 500,
+        xAxis: {
+          axisLabel: 'X Axis',
+          rotateLabels: -45
+        },
+        yAxis: {
+          axisLabel: 'Talk Counts of Young Entrepreneures',
+          axisLabelDistance: -10
+        }
+      }
+    }
+
+    this.data = [
+      {
+        key: 'Total Talks',
+        values: []
+      }
+    ];
+
+    const mysvg = d3.select('body');
+    this.sharedModule.getTalkCountsData().subscribe(data => {
+
+      const tmpData = JSON.parse(data['_body']);
+
+      Object.keys(tmpData).forEach((key) => {
+        // console.log('Key : ' + key + ', Value : ' + tmpData[key])
+        // this.data.values.add({label : key, value : tmpData[key]})
+        this.data[0]['values'].push({'label' : key, 'value' : +tmpData[key]});
+      })
+      console.log(this.data);
+      this.nvd3.chart.update();
+    });
+  }
+
+  ngOnInit() {
+  }
+}

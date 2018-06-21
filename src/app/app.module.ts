@@ -15,12 +15,16 @@ import { AppRoutes } from './app.routing';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { BargraphComponent } from './bargraph/bargraph.component';
 import { NvD3Module } from 'ng2-nvd3';
+import { LandingpageComponent } from './landingpage/landingpage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    BargraphComponent,
+    LandingpageComponent
   ],
   imports: [
     BrowserModule,
