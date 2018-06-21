@@ -21,11 +21,13 @@
       "styles": [
         "../node_modules/@swimlane/ngx-datatable/release/index.css",
         "assets/styles/app.scss",
-		"../node_modules/ag-grid/dist/styles/ag-grid.css",
-    "../node_modules/ag-grid/dist/styles/ag-theme-balham.css",
-    "../node_modules/font-awesome/css/font-awesome.min.css"
+        "../node_modules/ag-grid/dist/styles/ag-grid.css",
+        "../node_modules/ag-grid/dist/styles/ag-theme-balham.css",
+        "../node_modules/font-awesome/css/font-awesome.min.css",
+        "../node_modules/nvd3/build/nv.d3.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/cytoscape/dist/cytoscape.js"],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

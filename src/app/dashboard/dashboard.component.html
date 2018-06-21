@@ -18,8 +18,17 @@
                 [columnDefs]="columnDefs"
                 
                 animateRows= "true">
-            </ag-grid-angular>    
+            </ag-grid-angular>   
         </div>
+        <div class="container" style="margin-top: 1vh">
+            <h2 align="center" >Bar Graph</h2>
+            <nvd3 #nvd3 [options]="options" [data]="data"></nvd3>
+        </div> 
+
+        <!-- <div class="container" style="margin-top: 1vh">
+                <h2 align="center" >Bar Graph</h2>
+                <ng2-cytoscape [elements]="graphData"></ng2-cytoscape>
+        </div>  -->
             
         <div class="footer">
                 @ Copyrights. La Fabrink

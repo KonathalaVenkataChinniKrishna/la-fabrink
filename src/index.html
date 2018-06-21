@@ -10,7 +10,6 @@
   
   <style type="text/css">
   </style>
-  <script src="assets/vendor/pace/pace.js"></script>
   <script type="text/javascript">
     (function (window) {
       // Polyfills DOM4 MouseEvent only on IE11
@@ -29,22 +28,13 @@
 
         window.MouseEvent = MouseEvent;
       }
-
-      // Initialize PACE
-      window.paceOptions = {
-        document: true,
-        eventLag: true,
-        restartOnPushState: true,
-        restartOnRequestAfter: true,
-        ajax: {
-          trackMethods: [ 'POST','GET']
-        }
-      };
     })(window);
   </script>
 </head>
 <body>
-    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.4/nv.d3.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.5/nv.d3.min.js"></script>
   <app-root></app-root>
 </body>
 </html>

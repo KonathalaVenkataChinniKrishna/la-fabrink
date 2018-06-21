@@ -9,3 +9,10 @@
     font-size: x-small;
     padding: 3px;
  }
+
+ .nvd3 .nv-axis path {
+    fill: none;
+    stroke: #000;
+    stroke-opacity: .75;
+    shape-rendering: crispEdges;
+  }

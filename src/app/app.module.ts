@@ -15,10 +15,7 @@ import { AppRoutes } from './app.routing';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
-export function createTranslateLoader(http: Http) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-}
+import { NvD3Module } from 'ng2-nvd3';
 
 @NgModule({
   declarations: [
@@ -30,16 +27,11 @@ export function createTranslateLoader(http: Http) {
     AgGridModule.withComponents([]),
     BrowserAnimationsModule,
     SharedModule,
+    NvD3Module,
     RouterModule.forRoot(AppRoutes),
     FormsModule,
     HttpModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: (createTranslateLoader),
-        deps: [Http]
-      }
-    }),
+    TranslateModule.forRoot({}),
     NgbModule.forRoot(),
     SidebarModule.forRoot(),
   ],
