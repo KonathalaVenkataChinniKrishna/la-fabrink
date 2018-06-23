@@ -19,4 +19,8 @@ export class SharedModule {
     return this.http.get('http://localhost:8081/lafabryik/talkCounts');
   }
 
+  public getInteractionData() {
+    return this.http.get('http://localhost:8081/lafabryik/interactions');
+  }
+
  }

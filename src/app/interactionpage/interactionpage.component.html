@@ -6,8 +6,8 @@
                     </div>
                     <hr class="container-fluid" style="background-color: white">
                     <button onclick="window.location.href='dashboard'" class="btn btn-default col-lg-12 leftpane">La Fabryk Dashboard<span style="float: right"><i class="fa fa-angle-right"></i></span></button>
-                    <button onclick="window.location.href='bargraph'" class="btn btn-default col-lg-12 leftpane" style="background-color: #dddedf; color: black;">Young Entrepreneurs Visits<span style="float: right"><i class="fa fa-angle-right"></i></span></button>
-                    <button onclick="window.location.href='interaction'" class="btn btn-default col-lg-12 leftpane">Entrepreneurs Connection<span style="float: right"><i class="fa fa-angle-right"></i></span></button>
+                    <button onclick="window.location.href='bargraph'" class="btn btn-default col-lg-12 leftpane">Young Entrepreneurs Visits<span style="float: right"><i class="fa fa-angle-right"></i></span></button>
+                    <button onclick="window.location.href='interaction'" class="btn btn-default col-lg-12 leftpane" style="background-color: #dddedf; color: black;">Entrepreneurs Connection<span style="float: right"><i class="fa fa-angle-right"></i></span></button>
                     <button onclick="window.location.href='dashboard'" class="btn btn-default col-lg-12 leftpane"><i class="fa fa-id-card"></i> Others<span style="float: right"><i class="fa fa-angle-right"></i></span></button>
                 </div>
                 <div class="col-lg-10" style="background: url('../../assets/images/background.jpg'); height: 100vh;">
@@ -20,9 +20,10 @@
                         <div class="container" style="margin-top: 1%; text-align: right">
                                 <img onclick="window.location.href=''" src='./../../assets/images/logo-mini.png' style="width: 60px; height: 65px; margin-right: 5%">
                         </div>
-                        <div class="container" style="margin-top: 1vh">
-                            <h2 align="center" >Young Entrepreneurs</h2>
-                            <nvd3 #nvd3 [options]="options" [data]="data"></nvd3>
+                        <div class="container" style="margin-top: 1vh; text-align: center">
+                            <h2 align="center" >Entrepreneurs Interactions</h2>
+                            <!-- <nvd3 #nvd3 [options]="options" [data]="data"></nvd3> -->
+                            <svg width="900" height="418"></svg>
                         </div> 
                 
                         <!-- <div class="container" style="margin-top: 1vh">

@@ -1,7 +1,7 @@
 import { Component, AfterViewInit, ViewChild } from '@angular/core';
 
 import 'd3';
-import 'nvd3'
+import 'nvd3';
 import {NvD3Module} from 'ng2-nvd3';
 
 import * as $ from 'jquery';
@@ -72,8 +72,8 @@ rowData = [
           bottom: 180,
           left: 55
         },
-        x: function(d){return d.label;},
-        y: function(d){return d.value;},
+        x: function(d){return d.label; },
+        y: function(d){return d.value; },
         showValues: true,
         valueFormat: function(d){
           return d3.format(',.0f')(d);
@@ -88,7 +88,7 @@ rowData = [
           axisLabelDistance: -10
         }
       }
-    }
+    };
 
     this.data = [
       {
@@ -106,12 +106,9 @@ rowData = [
         // console.log('Key : ' + key + ', Value : ' + tmpData[key])
         // this.data.values.add({label : key, value : tmpData[key]})
         this.data[0]['values'].push({'label' : key, 'value' : +tmpData[key]});
-      })
+      });
       console.log(this.data);
       this.nvd3.chart.update();
     });
-  }
-
-  ngOnInit() {
   }
 }

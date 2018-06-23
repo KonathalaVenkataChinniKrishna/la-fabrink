@@ -1,9 +1,5 @@
 import { Component, AfterViewInit, ViewChild } from '@angular/core';
 
-import 'd3';
-import 'nvd3'
-import {NvD3Module} from 'ng2-nvd3';
-
 import * as $ from 'jquery';
 import * as shape from 'd3-shape';
 import { colorSets  } from '@swimlane/ngx-charts/release/utils/color-sets';
@@ -39,13 +35,10 @@ rowData: any[];
       this.rowData = JSON.parse(data['_body'])['response'];
       this.api.setRowData(this.rowData);
       this.api.refreshCells();
-    })
+    });
   }
 
   private onReady(params) {
     this.api = params.api;
-  }
-
-  ngOnInit() {
   }
 }

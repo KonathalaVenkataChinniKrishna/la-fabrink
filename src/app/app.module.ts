@@ -18,13 +18,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { BargraphComponent } from './bargraph/bargraph.component';
 import { NvD3Module } from 'ng2-nvd3';
 import { LandingpageComponent } from './landingpage/landingpage.component';
+import { InteractionpageComponent } from './interactionpage/interactionpage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     BargraphComponent,
-    LandingpageComponent
+    LandingpageComponent,
+    InteractionpageComponent
   ],
   imports: [
     BrowserModule,
