@@ -23,4 +23,8 @@ export class SharedModule {
     return this.http.get('http://localhost:8081/lafabryik/interactions');
   }
 
+  public getInteractionDendoData() {
+    return this.http.get('http://localhost:8081/lafabryik/interactionsdendo');
+  }
+
  }

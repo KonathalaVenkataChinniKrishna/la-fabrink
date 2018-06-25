@@ -10,6 +10,15 @@
   padding: 3px;
 }
 
+#leftpaneDiv {
+  min-height: 100vh; 
+  background-color: black;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 0;
+}
+
 .leftpane {
  background-color: transparent;
  border: transparent;
@@ -37,6 +46,13 @@
 .links line {
   stroke: #999;
   stroke-opacity: 0.6;
+}
+
+.links path {
+  stroke: #999;
+  stroke-line: 5,10,5;
+  fill: none;
+  stroke-opacity: 0.8;
 }
 
 .nodes circle {
@@ -69,8 +85,8 @@
 //   stroke-width: 1.5px;
 // }
 
-// text {
-//   font: 10px sans-serif;
-//   pointer-events: none;
-//   text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
-// }
+text {
+  font-size: medium;
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+}
