@@ -66,28 +66,29 @@ private botreply = true;
         this.botmsg = this.usermsg;
         this.usermsg = '';
         document.getElementById('bottypingid').style.visibility = 'visible';
-        setTimeout(() => {
-          document.getElementById('bottypingid').style.visibility = 'hidden';
-          elem.innerHTML += '<div id="convpiece' + this.convcnt + '" class="col-lg-12 convpiece">'
-        + '<div id="botimg' + this.humcnt + '" class="col-lg-1 botimg">'
-        + '        <img src="./../../assets/images/bot-mini.jpg" alt="Avatar" style="width: 30px; height: 30px; border-radius: 50%;">'
-        + '</div>'
-        + '<div id="botmsg' + this.humcnt + '" class="col-lg-5 botmsg">'
-        + '' + this.botmsg + ''
-        + '</div>'
-        + '<div class="col-lg-2 bottime">'
-        + '' + time + ''
-        + '</div>'
-        + '<div style="clear:both"></div>'
-        + '</div>';
-        document.getElementById('convpiece' + this.convcnt).style.height =
-        document.getElementById('botmsg' + this.humcnt).scrollHeight + 'px';
-        this.convcnt++;
-        this.botcnt++;
-        document.getElementById('botConv').scrollTop = document.getElementById('botConv').scrollHeight;
-        this.botmsg = '';
-        this.botreply = true;
-        }, 1500);
+          this.sharedModule.getBotReply(this.usermsg).subscribe(data => {
+            this.botmsg = data['_body'];
+            document.getElementById('bottypingid').style.visibility = 'hidden';
+              elem.innerHTML += '<div id="convpiece' + this.convcnt + '" class="col-lg-12 convpiece">'
+            + '<div id="botimg' + this.humcnt + '" class="col-lg-1 botimg">'
+            + '        <img src="./../../assets/images/bot-mini.jpg" alt="Avatar" style="width: 30px; height: 30px; border-radius: 50%;">'
+            + '</div>'
+            + '<div id="botmsg' + this.humcnt + '" class="col-lg-5 botmsg">'
+            + '' + this.botmsg + ''
+            + '</div>'
+            + '<div class="col-lg-2 bottime">'
+            + '' + time + ''
+            + '</div>'
+            + '<div style="clear:both"></div>'
+            + '</div>';
+            document.getElementById('convpiece' + this.convcnt).style.height =
+            document.getElementById('botmsg' + this.humcnt).scrollHeight + 'px';
+            this.convcnt++;
+            this.botcnt++;
+            document.getElementById('botConv').scrollTop = document.getElementById('botConv').scrollHeight;
+            this.botmsg = '';
+            this.botreply = true;
+          });
   }
 
   public ngOnInit() {
@@ -134,28 +135,28 @@ private botreply = true;
         this.botmsg = this.usermsg;
         this.usermsg = '';
         document.getElementById('bottypingid').style.visibility = 'visible';
-        setTimeout(() => {
-          document.getElementById('bottypingid').style.visibility = 'hidden';
-          elem.innerHTML += '<div id="convpiece' + this.convcnt + '" class="col-lg-12 convpiece">'
-        + '<div id="botimg' + this.humcnt + '" class="col-lg-1 botimg">'
-        + '        <img src="./../../assets/images/bot-mini.jpg" alt="Avatar" style="width: 30px; height: 30px; border-radius: 50%;">'
-        + '</div>'
-        + '<div id="botmsg' + this.humcnt + '" class="col-lg-5 botmsg">'
-        + '' + this.botmsg + ''
-        + '</div>'
-        + '<div class="col-lg-2 bottime">'
-        + '' + time + ''
-        + '</div>'
-        + '<div style="clear:both"></div>'
-        + '</div>';
-        document.getElementById('convpiece' + this.convcnt).style.height =
-        document.getElementById('botmsg' + this.humcnt).scrollHeight + 'px';
-        this.convcnt++;
-        this.botcnt++;
-        document.getElementById('botConv').scrollTop = document.getElementById('botConv').scrollHeight;
-        this.botmsg = '';
-        this.botreply = true;
-        }, 1500);
+          this.sharedModule.getBotReply(this.usermsg).subscribe(data => {
+            document.getElementById('bottypingid').style.visibility = 'hidden';
+              elem.innerHTML += '<div id="convpiece' + this.convcnt + '" class="col-lg-12 convpiece">'
+            + '<div id="botimg' + this.humcnt + '" class="col-lg-1 botimg">'
+            + '        <img src="./../../assets/images/bot-mini.jpg" alt="Avatar" style="width: 30px; height: 30px; border-radius: 50%;">'
+            + '</div>'
+            + '<div id="botmsg' + this.humcnt + '" class="col-lg-5 botmsg">'
+            + '' + this.botmsg + ''
+            + '</div>'
+            + '<div class="col-lg-2 bottime">'
+            + '' + time + ''
+            + '</div>'
+            + '<div style="clear:both"></div>'
+            + '</div>';
+            document.getElementById('convpiece' + this.convcnt).style.height =
+            document.getElementById('botmsg' + this.humcnt).scrollHeight + 'px';
+            this.convcnt++;
+            this.botcnt++;
+            document.getElementById('botConv').scrollTop = document.getElementById('botConv').scrollHeight;
+            this.botmsg = '';
+            this.botreply = true;
+          });
       }
     });
     // document.getElementById('convpiece1').style.height = document.getElementById('botmsg1').scrollHeight + 'px';

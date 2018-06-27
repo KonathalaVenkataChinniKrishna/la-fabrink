@@ -27,4 +27,8 @@ export class SharedModule {
     return this.http.get('http://localhost:8081/lafabryik/interactionsdendo');
   }
 
+  public getBotReply(usermsg: string) {
+    return this.http.get('http://localhost:5000/ask_bot/', usermsg);
+  }
+
  }
