@@ -1,0 +1,151 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: left;
+    font-size: x-small;
+    padding: 3px;
+ }
+
+ .convpiece {
+  overflow: hidden; 
+  // background-color: #3D3D3D;
+  min-height: 6vh;
+  margin-bottom: 5px;
+ }
+
+ .botimg {
+  bottom: 0; 
+  left: 0; 
+  position: absolute; 
+  float: left;
+  text-align: center;
+ }
+
+ .botmsg {
+  bottom: 0; 
+  word-wrap: break-word; 
+  left: 6vw;
+  position: absolute; 
+  background-color: wheat;
+  border-radius: 6px;
+  padding: 5px;
+ }
+
+ .bottime {
+  bottom: 0; 
+  word-wrap: break-word; 
+  left: 28vw;
+  position: absolute; 
+  opacity: 0.5;
+  font-size: small;
+  border-radius: 6px;
+  padding: 5px;
+ }
+
+ .bottyping {
+   opacity: 0.5;
+   width: 700px;
+   color: #A63808;
+   font-size: 15px;
+   transition: all 0.5s ease;
+ }
+
+ .humimg {
+  bottom: 0; 
+  right: 0; 
+  position: absolute; 
+  float: right;
+  text-align: center;
+ }
+
+ .hummsg {
+  bottom: 0; 
+  word-wrap: break-word; 
+  right: 6vw; 
+  text-align: right;
+  border-radius: 6px;
+  position: absolute; 
+  background-color: #27ADF7;
+  padding: 5px;
+ }
+
+ .humtime {
+  bottom: 0; 
+  word-wrap: break-word; 
+  right: 25vw;
+  position: absolute; 
+  opacity: 0.5;
+  font-size: small;
+  border-radius: 6px;
+  padding: 5px;
+ }
+
+ .leftpane {
+  background-color: transparent;
+  border: transparent;
+  border-radius: 0px;
+  text-align: left;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 68%;
+ }
+ 
+ #title {
+   color: white;
+   text-align: center;
+   cursor: pointer;
+   font-size: 170%;
+   margin-top: 7%;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: bolder;
+ }
+
+ .nvd3 .nv-axis path {
+    fill: none;
+    stroke: #000;
+    stroke-opacity: .75;
+    shape-rendering: crispEdges;
+  }
+
+
+
+  textarea{
+    width:700px;
+    padding-left:10px;
+    padding-right: 22px;
+    border-radius: 4px;
+    border:none;outline:none;
+  }
+  #erase{
+    position:absolute;
+    right: 0px;
+    top: 4px;
+    border:none;
+    height:20px;
+    width:25px;
+    border-radius:0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline:none;
+    background-color: transparent;
+    text-align:center;
+    font-weight:bold;
+    padding:2px;
+  }
+  #erase:hover{
+    cursor:pointer;
+  }
+
+  .buttonInside{
+    position:relative;
+    margin-bottom:10px;
+  }

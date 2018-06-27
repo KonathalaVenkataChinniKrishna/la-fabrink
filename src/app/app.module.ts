@@ -19,6 +19,8 @@ import { BargraphComponent } from './bargraph/bargraph.component';
 import { NvD3Module } from 'ng2-nvd3';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { InteractionpageComponent } from './interactionpage/interactionpage.component';
+import { InteractionpagedendoComponent } from './interactionpagedendo/interactionpagedendo.component';
+import { ChatbotpageComponent } from './chatbotpage/chatbotpage.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { InteractionpageComponent } from './interactionpage/interactionpage.comp
     DashboardComponent,
     BargraphComponent,
     LandingpageComponent,
-    InteractionpageComponent
+    InteractionpageComponent,
+    InteractionpagedendoComponent,
+    ChatbotpageComponent
   ],
   imports: [
     BrowserModule,

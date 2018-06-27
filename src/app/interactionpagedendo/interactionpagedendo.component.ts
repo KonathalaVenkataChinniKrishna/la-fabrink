@@ -99,12 +99,12 @@ interface HierarchyDatum {
 // };
 
 @Component({
-  selector: 'app-interactionpage',
-  templateUrl: './interactionpage.component.html',
-  styleUrls: ['./interactionpage.component.scss'],
+  selector: 'app-interactionpagedendo',
+  templateUrl: './interactionpagedendo.component.html',
+  styleUrls: ['./interactionpagedendo.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class InteractionpageComponent implements OnInit {
+export class InteractionpagedendoComponent implements OnInit {
 
   private margin: any = { top: 30, right: 200, bottom: 30, left: 200 };
      private width: number;
@@ -118,8 +118,8 @@ export class InteractionpageComponent implements OnInit {
   ngOnInit() {
     console.log('D3.js version:', d3['version']);
 
-    this.loadForceDirectedGraph();
-    // this.loadDendogram();
+    // this.loadForceDirectedGraph();
+    this.loadDendogram();
   }
 
   private draw(root: HierarchyPointNode<HierarchyDatum>) {
