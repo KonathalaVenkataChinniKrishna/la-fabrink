@@ -5,6 +5,7 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 import { InteractionpageComponent } from './interactionpage/interactionpage.component';
 import { InteractionpagedendoComponent } from './interactionpagedendo/interactionpagedendo.component';
 import { ChatbotpageComponent } from './chatbotpage/chatbotpage.component';
+import { IframeComponent } from './iframepage/iframe.component';
 
 export const AppRoutes: Routes = [{
   path: '',
@@ -29,4 +30,8 @@ export const AppRoutes: Routes = [{
 {
   path: 'chatbot',
   component: ChatbotpageComponent
+},
+{
+  path: 'iframe',
+  component: IframeComponent
 }];

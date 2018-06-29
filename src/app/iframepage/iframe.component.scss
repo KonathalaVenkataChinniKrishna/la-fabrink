@@ -1,0 +1,42 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: left;
+  font-size: x-small;
+  padding: 3px;
+}
+
+.leftpane {
+  background-color: transparent;
+  border: transparent;
+  border-radius: 0px;
+  text-align: left;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 68%;
+ }
+ 
+ #title {
+   color: white;
+   text-align: center;
+   cursor: pointer;
+   font-size: 170%;
+   margin-top: 7%;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: bolder;
+ }
+
+.nvd3 .nv-axis path {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .75;
+  shape-rendering: crispEdges;
+}

@@ -21,6 +21,7 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 import { InteractionpageComponent } from './interactionpage/interactionpage.component';
 import { InteractionpagedendoComponent } from './interactionpagedendo/interactionpagedendo.component';
 import { ChatbotpageComponent } from './chatbotpage/chatbotpage.component';
+import { IframeComponent } from './iframepage/iframe.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ChatbotpageComponent } from './chatbotpage/chatbotpage.component';
     LandingpageComponent,
     InteractionpageComponent,
     InteractionpagedendoComponent,
-    ChatbotpageComponent
+    ChatbotpageComponent, 
+    IframeComponent
   ],
   imports: [
     BrowserModule,
