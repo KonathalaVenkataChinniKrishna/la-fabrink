@@ -67,7 +67,7 @@ rowData = [
     this.options = {
       chart: {
         type: 'multiBarHorizontalChart',
-        height: 900,
+        height: 3000,
         barColor : function(d) {if (colorindex === 4) {colorindex = -1; }
                                 colorindex++;
                                 return colorCodes[colorindex]; },
