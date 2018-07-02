@@ -32,7 +32,7 @@ import { BargraphcontextComponent } from './bargraphcontext/bargraphcontext.comp
     LandingpageComponent,
     InteractionpageComponent,
     InteractionpagedendoComponent,
-    ChatbotpageComponent, 
+    ChatbotpageComponent,
     IframeComponent,
     BargraphcontextComponent
   ],

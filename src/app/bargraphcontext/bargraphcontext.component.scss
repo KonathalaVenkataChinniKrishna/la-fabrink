@@ -10,6 +10,15 @@
   padding: 3px;
 }
 
+#leftpaneDiv {
+  min-height: 100vh; 
+  background-color: black;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 0;
+}
+
 .leftpane {
   background-color: transparent;
   border: transparent;

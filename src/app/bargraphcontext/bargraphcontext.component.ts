@@ -62,12 +62,15 @@ rowData = [
             {data: {source: 'g', target: 'j', faveColor: '#F5A45D'}}
         ]
     };
-    const colorCodes = ['yellow', 'green', 'blue', 'red', 'pink'];
+    const colorCodes = ['red', 'green', 'blue', '#06A565', '#F89F04'];
+    let colorindex = -1;
     this.options = {
       chart: {
         type: 'multiBarHorizontalChart',
-        height: 500,
-        barColor : function(d) {return colorCodes[d.value%5]},
+        height: 900,
+        barColor : function(d) {if (colorindex === 4) {colorindex = -1; }
+                                colorindex++;
+                                return colorCodes[colorindex]; },
         // color : ['red','green','red','yellow'] ,
         margin : {
           top: 80,
@@ -89,7 +92,7 @@ rowData = [
         },
         yAxis: {
           axisLabel: 'Context Counts of Young Entrepreneures',
-          axisLabelDistance: 10  
+          axisLabelDistance: 10
         }
       }
     };
