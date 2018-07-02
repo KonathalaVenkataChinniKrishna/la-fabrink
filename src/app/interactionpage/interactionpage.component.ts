@@ -267,7 +267,7 @@ export class InteractionpageComponent implements OnInit {
 
     const simulation = d3.forceSimulation()
       .force('link', d3.forceLink().id((d) => d['id']))
-      .force('charge', d3.forceManyBody().strength(-300).distanceMax(200).distanceMin(10))
+      .force('charge', d3.forceManyBody().strength(-100).distanceMax(200).distanceMin(10))
       .force('center', d3.forceCenter(width / 2, height / 2));
       // .force('collision', d3.forceCollide().radius(function(d) {
       //   return 1;

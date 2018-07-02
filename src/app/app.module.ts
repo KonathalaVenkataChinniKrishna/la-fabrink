@@ -22,6 +22,7 @@ import { InteractionpageComponent } from './interactionpage/interactionpage.comp
 import { InteractionpagedendoComponent } from './interactionpagedendo/interactionpagedendo.component';
 import { ChatbotpageComponent } from './chatbotpage/chatbotpage.component';
 import { IframeComponent } from './iframepage/iframe.component';
+import { BargraphcontextComponent } from './bargraphcontext/bargraphcontext.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { IframeComponent } from './iframepage/iframe.component';
     InteractionpageComponent,
     InteractionpagedendoComponent,
     ChatbotpageComponent, 
-    IframeComponent
+    IframeComponent,
+    BargraphcontextComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, RequestOptions } from '@angular/http';
 
 @NgModule({
   declarations: [],
@@ -19,6 +19,10 @@ export class SharedModule {
     return this.http.get('http://localhost:8081/lafabryik/talkCounts');
   }
 
+  public getContextCountsData() {
+    return this.http.get('http://localhost:8081/lafabryik/contextCounts');
+  }
+
   public getInteractionData() {
     return this.http.get('http://localhost:8081/lafabryik/interactions');
   }
@@ -28,7 +32,10 @@ export class SharedModule {
   }
 
   public getBotReply(usermsg: string) {
-    return this.http.get('http://localhost:5000/ask_bot/', usermsg);
+    console.log('Hello baby ' + usermsg);
+    const url = 'http://localhost:6060/ask_bot/'+ usermsg;
+    console.log(url);
+    return this.http.get(url);
   }
 
  }

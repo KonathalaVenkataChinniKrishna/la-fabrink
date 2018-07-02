@@ -6,6 +6,7 @@ import { InteractionpageComponent } from './interactionpage/interactionpage.comp
 import { InteractionpagedendoComponent } from './interactionpagedendo/interactionpagedendo.component';
 import { ChatbotpageComponent } from './chatbotpage/chatbotpage.component';
 import { IframeComponent } from './iframepage/iframe.component';
+import { BargraphcontextComponent } from './bargraphcontext/bargraphcontext.component';
 
 export const AppRoutes: Routes = [{
   path: '',
@@ -18,6 +19,10 @@ export const AppRoutes: Routes = [{
 {
   path: 'bargraph',
   component: BargraphComponent
+},
+{
+  path: 'contextgraph',
+  component: BargraphcontextComponent
 },
 {
   path: 'interaction',

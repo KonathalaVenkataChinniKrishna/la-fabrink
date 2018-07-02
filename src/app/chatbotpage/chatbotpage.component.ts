@@ -64,9 +64,9 @@ private botreply = true;
         this.humcnt++;
         document.getElementById('botConv').scrollTop = document.getElementById('botConv').scrollHeight;
         this.botmsg = this.usermsg;
-        this.usermsg = '';
         document.getElementById('bottypingid').style.visibility = 'visible';
           this.sharedModule.getBotReply(this.usermsg).subscribe(data => {
+            this.usermsg = '';
             this.botmsg = data['_body'];
             document.getElementById('bottypingid').style.visibility = 'hidden';
               elem.innerHTML += '<div id="convpiece' + this.convcnt + '" class="col-lg-12 convpiece">'
@@ -135,14 +135,16 @@ private botreply = true;
         this.botmsg = this.usermsg;
         this.usermsg = '';
         document.getElementById('bottypingid').style.visibility = 'visible';
-          this.sharedModule.getBotReply(this.usermsg).subscribe(data => {
+          this.sharedModule.getBotReply(this.botmsg).subscribe(data => {
         // setTimeout(() => {
-          document.getElementById('bottypingid').style.visibility = 'hidden';
+          
+          this.botmsg = data['_body'];  
+        document.getElementById('bottypingid').style.visibility = 'hidden';
           elem.innerHTML += '<div id="convpiece' + this.convcnt + '" class="col-lg-12 convpiece">'
-        + '<div id="botimg' + this.humcnt + '" class="col-lg-1 botimg">'
+        + '<div id="botimg' + this.botcnt + '" class="col-lg-1 botimg">'
         + '        <img src="./../../assets/images/bot-mini.jpg" alt="Avatar" style="width: 30px; height: 30px; border-radius: 50%;">'
         + '</div>'
-        + '<div id="botmsg' + this.humcnt + '" class="col-lg-5 botmsg">'
+        + '<div id="botmsg' + this.botcnt + '" class="col-lg-5 botmsg">'
         + '' + this.botmsg + ''
         + '</div>'
         + '<div class="col-lg-2 bottime">'
@@ -151,14 +153,14 @@ private botreply = true;
         + '<div style="clear:both"></div>'
         + '</div>';
         document.getElementById('convpiece' + this.convcnt).style.height =
-        document.getElementById('botmsg' + this.humcnt).scrollHeight + 'px';
+        document.getElementById('botmsg' + this.botcnt).scrollHeight + 'px';
         this.convcnt++;
         this.botcnt++;
         document.getElementById('botConv').scrollTop = document.getElementById('botConv').scrollHeight;
         this.botmsg = '';
         this.botreply = true;
-        // }, 2000);
-            //
+        // }, 1000);
+            // 
           });
       }
     });
