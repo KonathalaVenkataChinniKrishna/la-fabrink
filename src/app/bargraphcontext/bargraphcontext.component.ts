@@ -91,7 +91,7 @@ rowData = [
           axisLabelDistance: -10
         },
         yAxis: {
-          axisLabel: 'Context Counts of Young Entrepreneures',
+          axisLabel: 'Context Counts of Jeune Entrepreneurs',
           axisLabelDistance: 10
         }
       }

@@ -276,6 +276,8 @@ export class InteractionpageComponent implements OnInit {
     this.sharedModule.getInteractionData().subscribe(data => {
       data = JSON.parse(data['_body']);
 
+      console.log(data);
+
     // });
     // d3.json('assets/miserables.json', (err, data) => {
     //   if (err) { throw new Error('Bad data file!'); }

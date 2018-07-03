@@ -84,7 +84,7 @@ rowData = [
           rotateLabels: -45
         },
         yAxis: {
-          axisLabel: 'Talk Counts of Young Entrepreneures',
+          axisLabel: 'Talk Counts of Jeune Entrepreneurs',
           axisLabelDistance: -10
         }
       }

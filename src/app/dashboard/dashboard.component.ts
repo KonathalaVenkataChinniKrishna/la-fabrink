@@ -23,7 +23,7 @@ export class DashboardComponent {
 
   columnDefs = [
     {headerName: 'Message Initiator', field: 'Facebook_Initiator', width: 350 },
-    {headerName: 'Young Entrepreneur', field: 'Young_Entrepreneur', width: 350 },
+    {headerName: 'Jeune Entrepreneur', field: 'Young_Entrepreneur', width: 350 },
     {headerName: 'Message', field: 'Message', width: 350 }
 ];
 

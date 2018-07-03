@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Http, RequestOptions } from '@angular/http';
+import { Http, RequestOptions, Headers } from '@angular/http';
 
 @NgModule({
   declarations: [],
@@ -31,9 +31,13 @@ export class SharedModule {
     return this.http.get('http://localhost:8081/lafabryik/interactionsdendo');
   }
 
-  public getBotReply(usermsg: string) {
-    console.log('Hello baby ' + usermsg);
-    const url = 'http://localhost:6060/ask_bot/'+ usermsg;
+  public getBotReply(question: string) {
+    // const options = new RequestOptions();
+    // options.headers = new Headers();
+    // options.headers.append('Content-Type', 'application/json');
+    // return this.http.post('https://vikas-projects.appspot.com/api/reply', JSON.stringify(question), options);
+    // console.log('Hello baby ' + usermsg);
+    const url = 'http://localhost:6060/ask_bot/' + question;
     console.log(url);
     return this.http.get(url);
   }
