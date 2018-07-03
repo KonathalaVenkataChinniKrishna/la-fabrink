@@ -65,11 +65,11 @@ private botreply = true;
         this.humcnt++;
         document.getElementById('botConv').scrollTop = document.getElementById('botConv').scrollHeight;
         this.botmsg = this.usermsg;
-        this.botmsg = '{"options" : ["asdlfjasldkfjalskdjflaksjflkajsdflkjasdlfkjalsasdflkasjdf", "krishna"]}';
+        // this.botmsg = '{"options" : ["asdlfjasldkfjalskdjflaksjflkajsdflkjasdlfkjalsasdflkasjdf", "krishna"]}';
         this.usermsg = '';
         document.getElementById('bottypingid').style.visibility = 'visible';
-          // this.sharedModule.getBotReply(this.botmsg).subscribe(data => {
-            // this.botmsg = data['_body'];
+          this.sharedModule.getBotReply(this.botmsg).subscribe(data => {
+            this.botmsg = data['_body'];
             if (this.botmsg.substr(0, 1) === '{') {
               this.botoptions = JSON.parse(this.botmsg)['options'];
               document.getElementById('bottypingid').style.visibility = 'hidden';
@@ -151,7 +151,7 @@ private botreply = true;
             document.getElementById('botConv').scrollTop = document.getElementById('botConv').scrollHeight;
             this.botmsg = '';
             this.botreply = true;
-          // });
+          });
   }
 
   public initiateHumMsg(event: any) {
@@ -203,12 +203,12 @@ private botreply = true;
         this.humcnt++;
         document.getElementById('botConv').scrollTop = document.getElementById('botConv').scrollHeight;
         this.botmsg = this.usermsg;
-        this.botmsg = '{"options" : ["asdlfjasldkfjalskdjflaksjflkajsdflkjasdlfkjalsasdflkasjdf", "krishna"]}';
+        // this.botmsg = '{"options" : ["asdlfjasldkfjalskdjflaksjflkajsdflkjasdlfkjalsasdflkasjdf", "krishna"]}';
         this.usermsg = '';
         document.getElementById('bottypingid').style.visibility = 'visible';
-          // this.sharedModule.getBotReply(this.botmsg).subscribe(data => {
+          this.sharedModule.getBotReply(this.botmsg).subscribe(data => {
         // setTimeout(() => {
-          // this.botmsg = data['_body'];
+          this.botmsg = data['_body'];
           if (this.botmsg.substr(0, 1) === '{') {
             this.botoptions = JSON.parse(this.botmsg)['options'];
             document.getElementById('bottypingid').style.visibility = 'hidden';
@@ -292,7 +292,7 @@ private botreply = true;
         this.botmsg = '';
         this.botreply = true;
         // }, 1000);
-          // });
+          });
       }
     });
     // document.getElementById('convpiece1').style.height = document.getElementById('botmsg1').scrollHeight + 'px';
