@@ -7,6 +7,7 @@ import { InteractionpagedendoComponent } from './interactionpagedendo/interactio
 import { ChatbotpageComponent } from './chatbotpage/chatbotpage.component';
 import { IframeComponent } from './iframepage/iframe.component';
 import { BargraphcontextComponent } from './bargraphcontext/bargraphcontext.component';
+import { ChatbotbothpageComponent } from './chatbotbothpage/chatbotbothpage.component';
 
 export const AppRoutes: Routes = [{
   path: '',
@@ -39,4 +40,8 @@ export const AppRoutes: Routes = [{
 {
   path: 'iframe',
   component: IframeComponent
+},
+{
+  path: 'bothbots',
+  component: ChatbotbothpageComponent
 }];
