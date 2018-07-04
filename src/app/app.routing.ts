@@ -8,6 +8,7 @@ import { ChatbotpageComponent } from './chatbotpage/chatbotpage.component';
 import { IframeComponent } from './iframepage/iframe.component';
 import { BargraphcontextComponent } from './bargraphcontext/bargraphcontext.component';
 import { ChatbotbothpageComponent } from './chatbotbothpage/chatbotbothpage.component';
+import { ManualpageComponent } from './manualpage/manualpage.component';
 
 export const AppRoutes: Routes = [{
   path: '',
@@ -44,4 +45,8 @@ export const AppRoutes: Routes = [{
 {
   path: 'bothbots',
   component: ChatbotbothpageComponent
+},
+{
+  path: 'manual',
+  component: ManualpageComponent
 }];

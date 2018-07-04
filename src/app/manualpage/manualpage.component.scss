@@ -1,0 +1,52 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: left;
+  font-size: x-small;
+  padding: 3px;
+}
+
+#leftpaneDiv {
+  min-height: 100vh; 
+  background-color: black;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 0;
+}
+
+.leftpane {
+  background-color: transparent;
+  border: transparent;
+  border-radius: 0px;
+  text-align: left;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 68%;
+ }
+ 
+ #title {
+   color: white;
+   text-align: center;
+   cursor: pointer;
+   font-size: 170%;
+   margin-top: 7%;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: bolder;
+ }
+
+ .question {
+  //  display: flex;
+  //  vertical-align: middle;
+  //  align-items: center;
+  //  align-content: center;
+    display: flex; justify-content:center; align-content:center; flex-direction:column;height: 6vh;font-size: large; background-color: transparent; border-color: transparent
+ }

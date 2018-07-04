@@ -31,6 +31,17 @@ export class SharedModule {
     return this.http.get('http://localhost:8081/lafabryik/interactionsdendo');
   }
 
+  public getQuestions() {
+    return this.http.get('http://40.117.131.214:5000/getQueries');
+  }
+
+  public postAnswers(submitStr: string) {
+    const options = new RequestOptions();
+    options.headers = new Headers();
+    options.headers.append('Content-Type', 'application/json');
+    return this.http.post('https://vikas-projects.appspot.com/api/reply', JSON.parse(submitStr), options);
+  }
+
   public getBotReply(question: string) {
     // const options = new RequestOptions();
     // options.headers = new Headers();

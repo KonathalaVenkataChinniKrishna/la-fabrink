@@ -9,14 +9,14 @@
                         <button onclick="window.location.href='dashboard'" class="btn btn-default col-lg-12 leftpane">Messages d'interaction<span style="float: right"><i class="fa fa-angle-right"></i></span></button>
                     <button onclick="window.location.href='bargraph'" class="btn btn-default col-lg-12 leftpane">Jeune Entrepreneurs Visits<span style="float: right"><i class="fa fa-angle-right"></i></span></button>
                     <button onclick="window.location.href='interaction'" class="btn btn-default col-lg-12 leftpane">Relations Entrepreneur<span style="float: right"><i class="fa fa-angle-right"></i></span></button>
-                    <button onclick="window.location.href='contextgraph'" class="btn btn-default col-lg-12 leftpane" style="background-color: #dddedf; color: black;">Fréquence du contexte<span style="float: right"><i class="fa fa-angle-right"></i></span></button>
+                    <button onclick="window.location.href='contextgraph'" class="btn btn-default col-lg-12 leftpane">Fréquence du contexte<span style="float: right"><i class="fa fa-angle-right"></i></span></button>
                     <button onclick="window.location.href='interactiondendo'" class="btn btn-default col-lg-12 leftpane">Arbre De Connexion<span style="float: right"><i class="fa fa-angle-right"></i></span></button>
                     <button onclick="window.location.href='chatbot'" class="btn btn-default col-lg-12 leftpane">MOOD Professeur<span style="float: right"><i class="fa fa-angle-right"></i></span></button>
                     <button onclick="window.location.href='iframe'" class="btn btn-default col-lg-12 leftpane">LA FABRYK MOOD<span style="float: right"><i class="fa fa-angle-right"></i></span></button>
                     <button onclick="window.location.href='bothbots'" class="btn btn-default col-lg-12 leftpane">MOOD and Professeur<span style="float: right"><i class="fa fa-angle-right"></i></span></button>
-                    <button onclick="window.location.href='manual'" class="btn btn-default col-lg-12 leftpane">Réponse Manuelle<span style="float: right"><i class="fa fa-angle-right"></i></span></button>
+                    <button onclick="window.location.href='manual'" class="btn btn-default col-lg-12 leftpane" style="background-color: #dddedf; color: black;">Réponse Manuelle<span style="float: right"><i class="fa fa-angle-right"></i></span></button>
                     </div>
-                    <div class="col-lg-10" style="background: url('../../assets/images/background.jpg'); min-height: 100vh; z-index: 0; position: absolute; right: 0;">
+                    <div class="col-lg-10" style="background: url('../../assets/images/botBackground.jpg'); background-size: cover; height: 100vh; min-height: 100vh; z-index: 0; position: absolute; right: 0;">
                         <div id="header" class="container-fluid" style="background-color: #3D3D3D; color: white; font-family: 'Times New Roman', Times, serif">
                                 <!-- <h5 align="center" style="padding: 2px">LA FABRINK</h5> -->
                                 <!-- <div style="float: right"> -->
@@ -27,9 +27,21 @@
                                 <img onclick="window.location.href=''" src='./../../assets/images/logo-mini.png' style="width: 60px; height: 65px; margin-right: 5%">
                         </div>
                         <div class="container" style="margin-top: 1vh">
-                            <h2 align="center" >Contextes Les Plus Parlés</h2>
-                            <nvd3 #nvd3 [options]="options" [data]="data"></nvd3>
-                        </div> 
+                            <h2 style="color: burlywood" align="center" >Répondre aux questions manuellement</h2>
+                        </div>
+                        <div id="manualQue" style="margin-top: 2vh; background-color: transparent;overflow:auto; position: relative; height:70vh;" class="container-fluid">
+                                <!-- <div class="row">
+                                        <div class="col-lg-4" style="text-align: right;">
+                                                <p id="que1" class="question" align="right">Question Here?</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                                <textarea id="ans1" class="form-control" [(ngModel)]="usermsg" id="usermsg" rows="2" cols="70" placeholder="Répondre s'il vous plaît ..."></textarea>
+                                        </div>
+                                </div> -->
+                        </div>
+                        <div class="container" style="text-align: center">
+                                <button (click)="submitAnswers()" class="btn btn-primary col-lg-3">Soumettre les réponses</button>
+                        </div>
                 
                         <!-- <div class="container" style="margin-top: 1vh">
                                 <h2 align="center" >Bar Graph</h2>

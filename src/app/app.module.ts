@@ -24,6 +24,7 @@ import { ChatbotpageComponent } from './chatbotpage/chatbotpage.component';
 import { IframeComponent } from './iframepage/iframe.component';
 import { BargraphcontextComponent } from './bargraphcontext/bargraphcontext.component';
 import { ChatbotbothpageComponent } from './chatbotbothpage/chatbotbothpage.component';
+import { ManualpageComponent } from './manualpage/manualpage.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ChatbotbothpageComponent } from './chatbotbothpage/chatbotbothpage.comp
     ChatbotpageComponent,
     IframeComponent,
     BargraphcontextComponent,
-    ChatbotbothpageComponent
+    ChatbotbothpageComponent,
+    ManualpageComponent
   ],
   imports: [
     BrowserModule,
